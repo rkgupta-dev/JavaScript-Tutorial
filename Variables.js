@@ -96,3 +96,19 @@ function globalVar(){
 globalVar();  // Output: "I am global variable"
 
 console.log(globalVariable);  // Accessible outside too, Output: "I am global variable"
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------
+Summary:
+var: Old way of declaring variables (has function scope).
+let: Modern way to declare variables that can be changed (has block scope).
+const: Used to declare variables that cannot be changed (also block scope).
+Always prefer using let and const in modern JavaScript because they are more predictable and safer to use than var.
+*/

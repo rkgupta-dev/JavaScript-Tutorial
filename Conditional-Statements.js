@@ -114,3 +114,22 @@ function getDayOfWeek(date) {
 //   let today = new Date('2024-09-20');  // Specific date: 20th September 2024
   console.log(getDayOfWeek(today));  // Output: "Monday", "Tuesday", etc., depending on the current day
   
+
+
+
+
+
+
+
+
+  
+
+ /*-------------------------------------------------------------------------------------------
+Summary:
+if: Executes a block of code if the condition is true.
+if-else: Executes one block of code if the condition is true and another block if it is false.
+else if: Tests multiple conditions and executes the corresponding block of code.
+switch: Evaluates an expression and matches it with different cases.
+break: Stops the loop entirely.
+continue: Skips the current iteration and moves to the next one.
+*/

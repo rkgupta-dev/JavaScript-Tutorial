@@ -106,3 +106,18 @@ console.log(typeof num)  // x is a number
 
 num = "Hello";     
 console.log(typeof num)  // Now x is a string
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------
+Summary
+Primitive Data Types: Number, String, Boolean, Undefined, Null, Symbol, BigInt
+Complex Data Types: Object, Array, Function
+These data types help you structure and organize your data properly in a JavaScript program.
+*/
