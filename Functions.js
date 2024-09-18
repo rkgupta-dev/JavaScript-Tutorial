@@ -22,11 +22,11 @@ function greet() {
 }
 greet();
 
-function greet1(name) {        // name is parameter of greet1() function, parameter always local variable. 
+function greet1(name) {
+  // name is parameter of greet1() function, parameter always local variable.
   console.log("Hello " + name + "!");
 }
 greet1("Rohit");
-
 
 function sum(a, b) {
   s = a + b;
@@ -76,11 +76,17 @@ Syntax: let function_name = (param1, param2 ,..) => {
 
 const arrowSum = (val1, val2) => {
   console.log("Sum of two numbers = ", val1 + val2);
-}
+};
 arrowSum(3, 6);
 
-const subtract = (a, b) => a - b; // you can avoid curly bracess and return.
+const subtract = (a, b) => a - b; // you can also avoid curly bracess and return.
 console.log(subtract(10, 6)); // Output: 4
+
+const arrowMultiply = (m1, m2) => {
+  return m1 * m2;
+};
+let Result = arrowMultiply(10, 10);
+console.log(`The multiple of two numbers = ${Result}`);
 
 const greet2 = () => "Hello!";
 console.log(greet2()); // Output: 'Hello!'
@@ -180,7 +186,7 @@ processData(function () {
 function mainFunction(callback) {
   console.log("Performing operation...");
   // Use setTimeout to simulate an asynchronous operation
-  setTimeout(function() {
+  setTimeout(function () {
     callback("Operation complete");
   }, 1000);
 }
@@ -193,39 +199,68 @@ function callbackFunction(result) {
 // Call the main function with the callback function
 mainFunction(callbackFunction);
 
-
-function addNum(callback){
-   console.log("Adding two number.");
-   callback();
+function addNum(callback) {
+  console.log("Adding two number.");
+  callback();
 }
 
-addNum(function(A, B){
-   A = 5;
-   B = 6;
-   console.log(`${A} and ${B} = `, A + B);
+addNum(function (A, B) {
+  A = 5;
+  B = 6;
+  console.log(`${A} and ${B} = `, A + B);
 });
-
-
 
 /*
 7. Higher-Order Functions: A higher-order function is a function that takes another function as an argument or 
 returns a function. They are commonly used in array methods like .map(), .filter(), and .reduce(). */
 
 function doMath(operation, a, b) {
-   return operation(a, b);
- }
- 
- function add(x, y) {
-   return x + y;
- }
- 
- console.log(doMath(add, 5, 10));  // Output: 15
+  return operation(a, b);
+}
 
- 
+function add(x, y) {
+  return x + y;
+}
+
+console.log(doMath(add, 5, 10)); // Output: 15
+
+/*
+ Create a function using the "function" keyword that takes a String as an argument & return the 
+ number of vowels in the string */
+
+function countVowel(str) {
+  for (const char of str) {
+    if (
+      char === "a" ||
+      char === "e" ||
+      char === "i" ||
+      char === "o" ||
+      char === "u"
+    ) {
+      console.log(char);
+    }
+  }
+}
+countVowel("Rohit Kumar Gupta");
+console.log("--------------------------")
 
 
+const arrowCountVowel = (str) => {
+  for (const char of str) {
+    if (
+      char === "a" ||
+      char === "e" ||
+      char === "i" ||
+      char === "o" ||
+      char === "u"
+    ) {
+      console.log(char);
+    }
+  }
+};
+arrowCountVowel("abcdefghijklmnopqrstuvwxyz");
 
- /*--------------------------------------------------------------------------------------
+/*--------------------------------------------------------------------------------------
 Summary of JavaScript Functions:
 Function Declaration: Standard way to define functions.
 Function Expression: Assigns a function to a variable.
