@@ -22,10 +22,11 @@ function greet() {
 }
 greet();
 
-function greet1(name) {
+function greet1(name) {        // name is parameter of greet1() function, parameter always local variable. 
   console.log("Hello " + name + "!");
 }
 greet1("Rohit");
+
 
 function sum(a, b) {
   s = a + b;
@@ -68,8 +69,15 @@ console.log(multiply(4, 5)); // Output: 20
 3. Arrow Functions (=>): An arrow function is a more concise way to write function expressions introduced in ES6 (ECMAScript 2015). 
    It has a shorter syntax compared to traditional functions.
 
-Syntax: let function_name = (argument1, argument2 ,..) => expression
+Syntax: let function_name = (param1, param2 ,..) => { 
+        expression
+        }
 */
+
+const arrowSum = (val1, val2) => {
+  console.log("Sum of two numbers = ", val1 + val2);
+}
+arrowSum(3, 6);
 
 const subtract = (a, b) => a - b; // you can avoid curly bracess and return.
 console.log(subtract(10, 6)); // Output: 4

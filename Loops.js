@@ -139,7 +139,11 @@ mobiles.forEach( model => {
 // Output: Redmi, Oppo, Vivo, Iphone
 
 
+const mode = ["dark", "light"];
 
+mode.forEach( modes => {
+  console.log(modes);
+})
 
 
 
