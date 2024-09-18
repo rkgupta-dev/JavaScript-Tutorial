@@ -217,7 +217,7 @@ function doMath(operation, a, b) {
 
 
 
- /*
+ /*--------------------------------------------------------------------------------------
 Summary of JavaScript Functions:
 Function Declaration: Standard way to define functions.
 Function Expression: Assigns a function to a variable.
