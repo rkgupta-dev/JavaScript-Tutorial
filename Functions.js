@@ -291,7 +291,27 @@ function printNumber(numb) {
   }
 }
 
-printNumber(5);
+printNumber("HII SHILTON!");
+
+/*
+5. Write a function which takes a number as a parameter and print it in decreasing order till 0. */
+
+function takeNumber(takeNum){
+  for(let i = takeNum; i >= 0; i--){
+    console.log(i);
+  }
+}
+
+takeNumber(5);
+
+/*
+6. Write a function which takes a parameter and only when Hello is given as the parameter it prints "World". */
+
+function PrintHello(abc){
+   console.log(`${abc} World!`);
+}
+
+PrintHello("Hello");
 
 /*--------------------------------------------------------------------------------------
 Summary of JavaScript Functions:
