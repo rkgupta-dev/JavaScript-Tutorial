@@ -296,8 +296,8 @@ printNumber("HII SHILTON!");
 /*
 5. Write a function which takes a number as a parameter and print it in decreasing order till 0. */
 
-function takeNumber(takeNum){
-  for(let i = takeNum; i >= 0; i--){
+function takeNumber(takeNum) {
+  for (let i = takeNum; i >= 0; i--) {
     console.log(i);
   }
 }
@@ -307,16 +307,53 @@ takeNumber(5);
 /*
 6. Write a function which takes a parameter and only when Hello is given as the parameter it prints "World". */
 
-function PrintHello(abc){
-  if(abc === "Hello") {
-   
+function PrintHello(abc) {
+  if (abc === "Hello") {
     console.log(`${abc} World!`);
-  }else{
-    console.log("Parameter is not Hello")
+  } else {
+    console.log("Parameter is not Hello");
   }
 }
 
 PrintHello("Hello");
+
+/*
+7. Function take price and discount as parameters and return the discounted amount. */
+
+function summerSale(price, discount) {
+  return price - discount;
+}
+
+const price = 100;
+const discount = 20;
+const discounted = summerSale(price, discount);
+
+console.log(`The discounted amount is: ₹${discounted}`);
+
+/*
+8. Function takes age as a parameter and checks whether the person is minor or not. If the person is minor and age
+   is a multiple of 2 return true otherwise false. Then if the return value is true print You are eligible for the offer. */
+
+function checkEligibility(age) {
+  if (age < 18 && age % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+const age = 10; 
+const isEligible = checkEligibility(age);
+
+if (isEligible) {
+  console.log("You are eligible for the offer.");
+} else {
+  console.log("You are not eligible for the offer.");
+}
+
+
+
+
 
 /*--------------------------------------------------------------------------------------
 Summary of JavaScript Functions:
