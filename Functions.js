@@ -280,13 +280,13 @@ function checkType(type) {
   return typeof type;
 }
 
-console.log(checkType(123));
+console.log(checkType("Divisha"));
 
 /*
 4. Write a JS function which takes a number as a parameter and print 5 times. */
 
 function printNumber(numb) {
-  for (let i = 0; i <= 5; i++) {
+  for (let i = 0; i < 5; i++) {
     console.log(numb);
   }
 }
@@ -308,7 +308,12 @@ takeNumber(5);
 6. Write a function which takes a parameter and only when Hello is given as the parameter it prints "World". */
 
 function PrintHello(abc){
-   console.log(`${abc} World!`);
+  if(abc === "Hello") {
+   
+    console.log(`${abc} World!`);
+  }else{
+    console.log("Parameter is not Hello")
+  }
 }
 
 PrintHello("Hello");
