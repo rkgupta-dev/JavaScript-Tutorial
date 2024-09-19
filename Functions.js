@@ -224,8 +224,9 @@ function add(x, y) {
 
 console.log(doMath(add, 5, 10)); // Output: 15
 
+//-----------------------------------Questions Practice---------------------------------
 /*
- Create a function using the "function" keyword that takes a String as an argument & return the 
+1. Create a function using the "function" keyword that takes a String as an argument & return the 
  number of vowels in the string */
 
 function countVowel(str) {
@@ -242,9 +243,9 @@ function countVowel(str) {
   }
 }
 countVowel("Rohit Kumar Gupta");
-console.log("--------------------------")
+console.log("--------------------------");
 
-
+// Above problem solved using Arrow Function.
 const arrowCountVowel = (str) => {
   for (const char of str) {
     if (
@@ -259,6 +260,38 @@ const arrowCountVowel = (str) => {
   }
 };
 arrowCountVowel("abcdefghijklmnopqrstuvwxyz");
+
+/*
+2. Write a function which calculates the product of two numbers, and returns the result. */
+
+function calculatesProduct() {
+  result = p1 * p2;
+  return result;
+}
+
+let p1 = 6;
+let p2 = 5;
+console.log(calculatesProduct());
+
+/*
+3. Write a function which takes a parameter and return is type. */
+
+function checkType(type) {
+  return typeof type;
+}
+
+console.log(checkType(123));
+
+/*
+4. Write a JS function which takes a number as a parameter and print 5 times. */
+
+function printNumber(numb) {
+  for (let i = 0; i <= 5; i++) {
+    console.log(numb);
+  }
+}
+
+printNumber(5);
 
 /*--------------------------------------------------------------------------------------
 Summary of JavaScript Functions:
