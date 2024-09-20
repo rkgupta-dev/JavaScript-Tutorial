@@ -342,7 +342,7 @@ function checkEligibility(age) {
   }
 }
 
-const age = 10; 
+const age = 17; 
 const isEligible = checkEligibility(age);
 
 if (isEligible) {
