@@ -410,6 +410,27 @@ const display = countChar(string, char);
 
 console.log(`In "${string}", No. of Occurrence ${char} = ${display}`);
 
+
+/*
+12. Count number of Vowels in String */
+
+function countVowel(str) {
+  var count = 0;
+  str=str.toLowerCase();
+  console.log(str);
+  for(var i=0;i<str.length;i++){
+    if(str.charAt(i)=="a"||str.charAt(i)=="e"||str.charAt(i)=="i"||
+       str.charAt(i)=="o"||str.charAt(i)=="u"){
+       count++; //Increment vowel count
+    }
+  }
+  return count;
+}
+
+console.log(countVowel("Hello")) //2
+console.log(countVowel("Umbrella")) //3
+console.log(countVowel("Umbrella")) //3
+
 /*--------------------------------------------------------------------------------------
 Summary of JavaScript Functions:
 Function Declaration: Standard way to define functions.
