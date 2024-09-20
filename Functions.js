@@ -321,11 +321,14 @@ PrintHello("Hello");
 7. Function take price and discount as parameters and return the discounted amount. */
 
 function summerSale(price, discount) {
-  return price - discount;
+
+  let discountedAmount = price * discount / 100;
+  console.log(`You saved ₹${discountedAmount}`);
+  return price - discountedAmount;
 }
 
-const price = 100;
-const discount = 20;
+const price = 500;
+const discount = 17;
 const discounted = summerSale(price, discount);
 
 console.log(`The discounted amount is: ₹${discounted}`);
@@ -336,8 +339,10 @@ console.log(`The discounted amount is: ₹${discounted}`);
 
 function checkEligibility(age) {
   if (age < 18 && age % 2 === 0) {
+    console.log("You are minor");
     return true;
   } else {
+    console.log("You are NOT minor");
     return false;
   }
 }
@@ -353,6 +358,25 @@ if (isEligible) {
 
 
 
+/*
+9. Write a javascript function which takes an array as parameters and return the largest number in that array. */
+
+function largestNumber(number){
+  let largest = number[0]; // Initialize the first element as the largest
+
+  for (let i = 0; i < number.length; i++) {
+    if (number[i] > largest) {
+      largest = number[i]; // Update largest if current element is greater
+    }
+  }
+
+  return largest;
+}
+
+const number = [45, 24, 66, 56, 8, 100, 200];
+console.log(number);
+console.log(number.length);
+console.log(largestNumber(number));
 
 
 /*--------------------------------------------------------------------------------------
