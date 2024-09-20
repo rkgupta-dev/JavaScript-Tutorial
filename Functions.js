@@ -321,8 +321,7 @@ PrintHello("Hello");
 7. Function take price and discount as parameters and return the discounted amount. */
 
 function summerSale(price, discount) {
-
-  let discountedAmount = price * discount / 100;
+  let discountedAmount = (price * discount) / 100;
   console.log(`You saved ₹${discountedAmount}`);
   return price - discountedAmount;
 }
@@ -347,7 +346,7 @@ function checkEligibility(age) {
   }
 }
 
-const age = 17; 
+const age = 17;
 const isEligible = checkEligibility(age);
 
 if (isEligible) {
@@ -356,12 +355,10 @@ if (isEligible) {
   console.log("You are not eligible for the offer.");
 }
 
-
-
 /*
 9. Write a javascript function which takes an array as parameters and return the largest number in that array. */
 
-function largestNumber(number){
+function largestNumber(number) {
   let largest = number[0]; // Initialize the first element as the largest
 
   for (let i = 0; i < number.length; i++) {
@@ -378,6 +375,40 @@ console.log(number);
 console.log(number.length);
 console.log(largestNumber(number));
 
+/*
+10. Write a function which takes a number as a param and print its table. */
+
+function printTable(number) {
+  for (i = 1; i <= 10; i++) {
+    console.log(`${number} * ${i} = ${number * i}`);
+  }
+}
+
+printTable(10);
+
+/*
+11. Write a function which takes a string and a character as param and return no. of occurrences of that character
+    in the string. */
+
+function countChar(string, char) {
+  let count = 0; // Initialize a count variable to store the occurrences
+
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] === char) {
+      // Check if the current character matches the input character
+      count++; // Increment the count if a match is found
+    }
+  }
+
+  return count; // Return the total count
+}
+
+const string = "Divisha";
+const char = "i";
+
+const display = countChar(string, char);
+
+console.log(`In "${string}", No. of Occurrence ${char} = ${display}`);
 
 /*--------------------------------------------------------------------------------------
 Summary of JavaScript Functions:
