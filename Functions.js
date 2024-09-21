@@ -415,21 +415,19 @@ console.log(`In "${string}", No. of Occurrence ${char} = ${display}`);
 12. Count number of Vowels in String */
 
 function countVowel(str) {
-  var count = 0;
+  let count = 0;
   str=str.toLowerCase();
-  console.log(str);
-  for(var i=0;i<str.length;i++){
-    if(str.charAt(i)=="a"||str.charAt(i)=="e"||str.charAt(i)=="i"||
-       str.charAt(i)=="o"||str.charAt(i)=="u"){
+  for(const char of str){
+    if(char === "a" || char === "e" || char === "i" || char === "o" || char === "u"){
        count++; //Increment vowel count
     }
   }
-  return count;
+  return console.log(`${count} Vowel in "${str}"`);
 }
 
-console.log(countVowel("Hello")) //2
-console.log(countVowel("Umbrella")) //3
-console.log(countVowel("Umbrella")) //3
+console.log(countVowel("Rohit"))
+
+
 
 /*--------------------------------------------------------------------------------------
 Summary of JavaScript Functions:
