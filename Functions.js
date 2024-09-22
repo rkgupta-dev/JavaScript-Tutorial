@@ -460,7 +460,7 @@ let add1 = [5 , 10, 7]
 let num = [...add1, 1, 2, 3, 4, 5, 6];
 
 function square1(num){
-  return console.table(num * num);
+  return console.log(`The square of ${num} = ${num * num}`);
 }
 
 num.forEach(square1)
