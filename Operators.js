@@ -11,6 +11,8 @@
 5. Bitwise Operators
 6. Unary Operators
 7. Conditional (Ternary) Operator
+8. Spread Operator (...) Operator
+Rest Operator (...) Operator
 */
 
 // -------------------------------------Coding Section--------------------------------------

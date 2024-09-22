@@ -432,6 +432,8 @@ function countVowel(str) {
 
 console.log(countVowel("Rohit"));
 
+/*
+13. Count number of Vowels in String using Arrow Functio */
 
 const arrCountVowel = (str) => {
   let count = 0;
@@ -450,6 +452,18 @@ const arrCountVowel = (str) => {
   return console.log(`${count} Vowel in "${str}"`);
 };
 arrCountVowel("Divisha");
+
+/*
+14. Create a function to calcuate squre of an array using ForEach loop. */
+
+let add1 = [5 , 10, 7]
+let num = [...add1, 1, 2, 3, 4, 5, 6];
+
+function square1(num){
+  return console.table(num * num);
+}
+
+num.forEach(square1)
 
 /*--------------------------------------------------------------------------------------
 Summary of JavaScript Functions:
