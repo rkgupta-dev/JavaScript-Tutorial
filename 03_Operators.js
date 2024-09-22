@@ -134,7 +134,14 @@ function sum(...numbers) {  // Rest operator in function parameters
 function sum1(...numbers){
     return numbers.reduce((total, num) => total + num, 0);
 }
-console.log(sum(1,2,4,5,6));
+console.log(sum1(1,2,4,5,6));   // Output: 18
+
+
+function calculateCartPrice(...num2){
+  return num2;
+}
+const result =  calculateCartPrice(200, 300, 240, 500);
+console.log(result);
 
 
 
