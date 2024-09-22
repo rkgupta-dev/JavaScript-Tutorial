@@ -26,6 +26,8 @@ const person = {
 console.log(person); //Output: { name: 'Rohit', age: 26, employeeId: 'JSR333', address: 'Bairiya' }
 console.log(person.age); //Output: Bairiya
 
+
+// function greet under the object.
 const person1 = {
   name: "Rohit",
   age: 26,
@@ -40,5 +42,36 @@ const person1 = {
 console.log(person1); //Output: { name: 'Rohit', age: 26, employeeId: 'JSR333', address: 'Bairiya' }
 
 console.log(person1.address); //Output: Bairiya
+console.log(person1["address"]); //Output: Bairiya (also access like this (person1["address"])
 
 person1.greet();
+
+
+const bikes = {
+  owner: "Rohit Kr. Gupta",
+  model: "Passion PRO",
+  color: "Black",
+};
+
+function greeting(){
+  console.log(`Hello Welcome to Ontrack Service Point.`);
+  console.log(`Mr. ${bikes.owner} your ${bikes.model} deliver on Monday after servicing.`)
+}
+
+greeting();
+
+
+/*
+2. Using the new Object() Constructor: You can also create an object using the new Object() constructor.*/
+
+const car = new Object();
+
+car.brand = "Benz";
+car.color = "White";
+car.speed = "200 Kmph";
+
+console.log(car.brand);
+console.log(`The speed of ${car.brand} is ${car.speed}`);
+
+car.rate = "5 million";
+console.log(car.rate);
