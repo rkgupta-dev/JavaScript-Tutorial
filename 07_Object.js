@@ -31,7 +31,6 @@ console.log(person); //Output: { name: 'Rohit', age: 26, employeeId: 'JSR333', a
 console.log(person.age); //Output: Bairiya
 person.greet(); // function greet under the object.
 
-
 const person1 = {
   name: "Rohit",
   age: 26,
@@ -45,20 +44,20 @@ console.log(person1); //Output: { name: 'Rohit', age: 26, employeeId: 'JSR333', 
 console.log(person1.address); //Output: Bairiya
 console.log(person1["address"]); //Output: Bairiya
 
-
 const bikes = {
   owner: "Rohit Kr. Gupta",
   model: "Passion PRO",
   color: "Black",
 };
 
-function greeting(){
+function greeting() {
   console.log(`Hello Welcome to Ontrack Service Point.`);
-  console.log(`Mr. ${person.name} your ${bikes.model} deliver on Monday after servicing.`)
+  console.log(
+    `Mr. ${person.name} your ${bikes.model} deliver on Monday after servicing.`
+  );
 }
 
 greeting();
-
 
 /*
 2. Using the new Object() Constructor: You can also create an object using the new Object() constructor.*/
@@ -75,16 +74,15 @@ console.log(`The speed of ${car.brand} is ${car.speed}`);
 car.rate = "5 million";
 console.log(car.rate);
 
-
-const user = {};  // create a normal object
+const user = {}; // create a normal object
 user.name = "Rohit";
 user.email = "rohitkr@gmail.com";
-user.email = "rkgupta@gmail.com";  // You can also update or properties
+user.email = "rkgupta@gmail.com"; // You can also update or properties
 
-// delete user.email; //You can also delete any properties 
+// delete user.email; //You can also delete any properties
 
 console.log(user); //Output: { name: 'Rohit', email: 'rohitkr@gmail.com' }
-console.log(user.email);  //Output: rohitkr@gmail.com
+console.log(user.email); //Output: rohitkr@gmail.com
 
 /*
 3. Using a Constructor Function: A constructor function allows you to create multiple objects 
@@ -93,15 +91,86 @@ console.log(user.email);  //Output: rohitkr@gmail.com
 function Person(name, age) {
   this.name = name;
   this.age = age;
-  this.greet = function() {
-     console.log(`Hello, My name is ${this.name} & i am ${this.age} years old.`);
-  }
-}
+  this.greet = function () {
+    console.log(`Hello, My name is ${this.name} & i am ${this.age} years old.`);
+  };
+};
 
 const Person1 = new Person("Rohit", 26);
 const Person2 = new Person("Saro", 50);
 
-console.log(Person1.name)
+console.log(Person1.name);
 
 Person1.greet();
 Person2.greet();
+
+/*
+# Accessing and Modifying Object Properties 
+1. Dot Notation: */
+
+const obj = {
+  name: "Rohit Kumar Gupta",
+  age: 50,
+};
+
+console.log(obj.name); // Access property
+console.log(obj.age); // Access property
+obj.age = 26; // Modify property
+console.log(obj.age); // After Modify Output
+
+/*
+2. Bracket Notation: You can also access properties using bracket notation, 
+   especially when property names are dynamic or contain special characters. */
+
+const obj1 = {
+  name: "Jitendra",
+  age: 50,
+};
+
+console.log(obj1["name"]);  // Output: John
+obj1["age"] = 31;           // Modify property
+console.log(obj1["age"]);  // Output after modify 31
+
+// # Nested Objects: An object can contain another object as a property, creating a nested object.
+
+const student = {
+  name: "Nikhil",
+  address: {
+    city: "Ranchi",
+    pincode: 815314,
+  }
+};
+
+let output = student.address.city;
+console.log(output);
+
+console.log(student.address.pincode); // you can also console log like this.
+
+/*
+# Object Methods: Objects can contain functions as values, which are called methods.
+  Methods allow you to add behavior to objects. */
+
+const calculator = {
+  add: function (a, b) {
+      return a + b;
+  },
+
+  subtract: function (a, b) {
+     return a - b;
+  },
+};
+
+console.log(calculator.add(45, 5));      // Output: 50
+console.log(calculator.subtract(45, 5)); // Output: 40
+
+// #Looping through an Object: You can loop through an object’s properties using a for...in loop.
+
+const persons = {
+  name: "Alice",
+  age: 25,
+  city: "Los Angeles"
+};
+
+for (let key in persons) {
+  console.log(`${key} : ${persons[key]}`);
+}
