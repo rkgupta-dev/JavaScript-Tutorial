@@ -33,18 +33,13 @@ const person1 = {
   age: 26,
   employeeId: "JSR333",
   address: "Bairiya",
-  greet: function () {
-    console.log(`Hello, My name is ${this.name}`);
-    console.log(`Hello, I am from ${this.address}`);
-  },
 };
 
 console.log(person1); //Output: { name: 'Rohit', age: 26, employeeId: 'JSR333', address: 'Bairiya' }
 
+// You can access object properties in two ways:
 console.log(person1.address); //Output: Bairiya
-console.log(person1["address"]); //Output: Bairiya (also access like this (person1["address"])
-
-person1.greet();
+console.log(person1["address"]); //Output: Bairiya
 
 
 const bikes = {
@@ -55,7 +50,7 @@ const bikes = {
 
 function greeting(){
   console.log(`Hello Welcome to Ontrack Service Point.`);
-  console.log(`Mr. ${bikes.owner} your ${bikes.model} deliver on Monday after servicing.`)
+  console.log(`Mr. ${person.name} your ${bikes.model} deliver on Monday after servicing.`)
 }
 
 greeting();
@@ -75,3 +70,18 @@ console.log(`The speed of ${car.brand} is ${car.speed}`);
 
 car.rate = "5 million";
 console.log(car.rate);
+
+
+const user = {};  // create a normal object
+user.name = "Rohit";
+user.email = "rohitkr@gmail.com";
+user.email = "rkgupta@gmail.com";  // You can also update or properties
+
+// delete user.email; //You can also delete any properties 
+
+console.log(user); //Output: { name: 'Rohit', email: 'rohitkr@gmail.com' }
+console.log(user.email);  //Output: rohitkr@gmail.com
+
+/*
+3. Using a Constructor Function: A constructor function allows you to create multiple objects 
+   with similar properties and methods. */
