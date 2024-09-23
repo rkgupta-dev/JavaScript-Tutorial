@@ -21,13 +21,17 @@ const person = {
   age: 26,
   employeeId: "JSR333",
   address: "Bairiya",
+  greet: function () {
+    console.log(`Hello, My name is ${this.name}`);
+    console.log(`Hello, I am from ${this.address}`);
+  },
 };
 
 console.log(person); //Output: { name: 'Rohit', age: 26, employeeId: 'JSR333', address: 'Bairiya' }
 console.log(person.age); //Output: Bairiya
+person.greet(); // function greet under the object.
 
 
-// function greet under the object.
 const person1 = {
   name: "Rohit",
   age: 26,
@@ -85,3 +89,19 @@ console.log(user.email);  //Output: rohitkr@gmail.com
 /*
 3. Using a Constructor Function: A constructor function allows you to create multiple objects 
    with similar properties and methods. */
+
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+  this.greet = function() {
+     console.log(`Hello, My name is ${this.name} & i am ${this.age} years old.`);
+  }
+}
+
+const Person1 = new Person("Rohit", 26);
+const Person2 = new Person("Saro", 50);
+
+console.log(Person1.name)
+
+Person1.greet();
+Person2.greet();
