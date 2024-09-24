@@ -207,8 +207,25 @@ const parent = {
 
 const child = Object.create(parent);
 
-console.log(child.name);
 child.info();
+
+function Teacher(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+// Adding a method to the prototype
+Teacher.prototype.greets = function() {
+  return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+};
+
+// Creating an instance of Person
+let teacher1 = new Teacher("Rohit", 25);
+console.log(teacher1.greets());  // Output: "Hello, my name is Rohit and I am 30 years old."
+
+let teacher2 = new Teacher("Avinash", 30);
+console.log(teacher2.greets());  // Output: "Hello, my name is Avinash and I am 25 years old."
+
 
 
 /*-----------------------------------------------------------------------------------------
