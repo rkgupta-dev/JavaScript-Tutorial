@@ -166,9 +166,9 @@ console.log(calculator.subtract(45, 5)); // Output: 40
 // 7. Looping through an Object: You can loop through an object’s properties using a for...in loop.
 
 const persons = {
-  name: "Alice",
-  age: 25,
-  city: "Los Angeles",
+  name: "Nikhil",
+  age: 12,
+  city: "Bangalore",
 };
 
 for (let key in persons) {
@@ -192,6 +192,23 @@ console.log(Object.values(xyz)); // Output: [ 'Akhil', 6, 'Bengalore' ]
 // iii. Object.entries(): Returns an array of key-value pairs.
 console.log(Object.entries(xyz)); 
 // Output: [ [ 'name', 'Akhil' ], [ 'age', 6 ], [ 'city', 'Bengalore' ] ]
+
+/*
+# More Concepts in JavaScript Objects
+1. Prototypes and Inheritance: JavaScript uses prototypal inheritance. Every JavaScript object has a hidden
+   property called __proto__ (or [[Prototype]]) that points to another object, called its prototype. */
+
+const parent = {
+  name: "Saro Devi",
+  info: function(){
+    console.log("Hello from parent Object.");
+  }
+}
+
+const child = Object.create(parent);
+
+console.log(child.name);
+child.info();
 
 
 /*-----------------------------------------------------------------------------------------
