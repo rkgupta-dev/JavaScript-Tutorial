@@ -227,6 +227,19 @@ let teacher2 = new Teacher("Avinash", 30);
 console.log(teacher2.greets());  // Output: "Hello, my name is Avinash and I am 25 years old."
 
 
+/*
+2. this Keyword in Objects: The this keyword refers to the current object from which it is called.
+   In object methods, this refers to the object itself. */
+
+const Car = {
+  brand: "Tata",
+  model: "Harrier",
+  getDetail: function() {
+    return `${this.brand} ${this.model}`;
+  }
+}
+
+console.log(Car.getDetail());
 
 /*-----------------------------------------------------------------------------------------
 Summary
