@@ -94,7 +94,7 @@ function Person(name, age) {
   this.greet = function () {
     console.log(`Hello, My name is ${this.name} & i am ${this.age} years old.`);
   };
-};
+}
 
 const Person1 = new Person("Rohit", 26);
 const Person2 = new Person("Saro", 50);
@@ -105,8 +105,8 @@ Person1.greet();
 Person2.greet();
 
 /*
-# Accessing and Modifying Object Properties 
-1. Dot Notation: */
+4. Accessing and Modifying Object Properties 
+i. Dot Notation: */
 
 const obj = {
   name: "Rohit Kumar Gupta",
@@ -119,26 +119,26 @@ obj.age = 26; // Modify property
 console.log(obj.age); // After Modify Output
 
 /*
-2. Bracket Notation: You can also access properties using bracket notation, 
-   especially when property names are dynamic or contain special characters. */
+ii. Bracket Notation: You can also access properties using bracket notation, 
+    especially when property names are dynamic or contain special characters. */
 
 const obj1 = {
   name: "Jitendra",
   age: 50,
 };
 
-console.log(obj1["name"]);  // Output: John
-obj1["age"] = 31;           // Modify property
-console.log(obj1["age"]);  // Output after modify 31
+console.log(obj1["name"]); // Output: John
+obj1["age"] = 31; // Modify property
+console.log(obj1["age"]); // Output after modify 31
 
-// # Nested Objects: An object can contain another object as a property, creating a nested object.
+// 5. Nested Objects: An object can contain another object as a property, creating a nested object.
 
 const student = {
   name: "Nikhil",
   address: {
     city: "Ranchi",
     pincode: 815314,
-  }
+  },
 };
 
 let output = student.address.city;
@@ -147,30 +147,58 @@ console.log(output);
 console.log(student.address.pincode); // you can also console log like this.
 
 /*
-# Object Methods: Objects can contain functions as values, which are called methods.
-  Methods allow you to add behavior to objects. */
+6. Object Methods: Objects can contain functions as values, which are called methods.
+   Methods allow you to add behavior to objects. */
 
 const calculator = {
   add: function (a, b) {
-      return a + b;
+    return a + b;
   },
 
   subtract: function (a, b) {
-     return a - b;
+    return a - b;
   },
 };
 
-console.log(calculator.add(45, 5));      // Output: 50
+console.log(calculator.add(45, 5)); // Output: 50
 console.log(calculator.subtract(45, 5)); // Output: 40
 
-// #Looping through an Object: You can loop through an object’s properties using a for...in loop.
+// 7. Looping through an Object: You can loop through an object’s properties using a for...in loop.
 
 const persons = {
   name: "Alice",
   age: 25,
-  city: "Los Angeles"
+  city: "Los Angeles",
 };
 
 for (let key in persons) {
   console.log(`${key} : ${persons[key]}`);
 }
+
+// 8. Common Object Methods: JavaScript provides some built-in methods for working with objects.
+
+const xyz = {
+  name: "Akhil",
+  age: 6,
+  city: "Bengalore",
+};
+
+// i. Object.keys(): Returns an array of an object's keys.
+ console.log(Object.keys(xyz)); // Output: [ 'name', 'age', 'city' ]
+
+ // ii. Object.values(): Returns an array of an object's values.
+console.log(Object.values(xyz)); // Output: [ 'Akhil', 6, 'Bengalore' ]
+
+// iii. Object.entries(): Returns an array of key-value pairs.
+console.log(Object.entries(xyz)); 
+// Output: [ [ 'name', 'Akhil' ], [ 'age', 6 ], [ 'city', 'Bengalore' ] ]
+
+
+/*-----------------------------------------------------------------------------------------
+Summary
+*An object is a collection of key-value pairs, where keys are strings (or symbols) and values can be
+ anything (including other objects and functions).
+*Objects can be created using object literals ({}), constructor functions, or the new Object() syntax.
+*Methods are functions inside objects, allowing you to add behavior to your objects.
+*JavaScript provides useful methods like Object.keys(), Object.values(), and Object.entries() to work
+ with object properties.  */
