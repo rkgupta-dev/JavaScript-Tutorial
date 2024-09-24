@@ -184,13 +184,13 @@ const xyz = {
 };
 
 // i. Object.keys(): Returns an array of an object's keys.
- console.log(Object.keys(xyz)); // Output: [ 'name', 'age', 'city' ]
+console.log(Object.keys(xyz)); // Output: [ 'name', 'age', 'city' ]
 
- // ii. Object.values(): Returns an array of an object's values.
+// ii. Object.values(): Returns an array of an object's values.
 console.log(Object.values(xyz)); // Output: [ 'Akhil', 6, 'Bengalore' ]
 
 // iii. Object.entries(): Returns an array of key-value pairs.
-console.log(Object.entries(xyz)); 
+console.log(Object.entries(xyz));
 // Output: [ [ 'name', 'Akhil' ], [ 'age', 6 ], [ 'city', 'Bengalore' ] ]
 
 /*
@@ -200,10 +200,10 @@ console.log(Object.entries(xyz));
 
 const parent = {
   name: "Saro Devi",
-  info: function(){
+  info: function () {
     console.log("Hello from parent Object.");
-  }
-}
+  },
+};
 
 const child = Object.create(parent);
 
@@ -215,17 +215,16 @@ function Teacher(name, age) {
 }
 
 // Adding a method to the prototype
-Teacher.prototype.greets = function() {
+Teacher.prototype.greets = function () {
   return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
 };
 
 // Creating an instance of Person
 let teacher1 = new Teacher("Rohit", 25);
-console.log(teacher1.greets());  // Output: "Hello, my name is Rohit and I am 30 years old."
+console.log(teacher1.greets()); // Output: "Hello, my name is Rohit and I am 30 years old."
 
 let teacher2 = new Teacher("Avinash", 30);
-console.log(teacher2.greets());  // Output: "Hello, my name is Avinash and I am 25 years old."
-
+console.log(teacher2.greets()); // Output: "Hello, my name is Avinash and I am 25 years old."
 
 /*
 2. this Keyword in Objects: The this keyword refers to the current object from which it is called.
@@ -234,12 +233,49 @@ console.log(teacher2.greets());  // Output: "Hello, my name is Avinash and I am 
 const Car = {
   brand: "Tata",
   model: "Harrier",
-  getDetail: function() {
+  getDetail: function () {
     return `${this.brand} ${this.model}`;
+  },
+};
+
+console.log(Car.getDetail());
+
+/*
+3. Getters and Setters in JavaScript 
+-> Getters and Setters are special methods in JavaScript that allow you
+   to control how properties of an object are accessed and modified. They provide a way to implement computed
+   properties or to validate input when updating a property.
+i. Getters (get keyword) */
+
+const p = {
+  firstName: "Rohit",
+  lastName: "Gupta",
+  // Getter for fullName
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+};
+
+console.log(p.fullName);
+
+/*
+ii. Setters (set keyword) */
+
+const p1 = {
+  firstName: "Rohit",
+  lastName: "Gupta",
+  // Setter for fullName
+  set fullName(value) {
+    const parts = value.split("");
+    this.firstName = parts[0];
+    this.lastName = parts[1];
   }
 }
 
-console.log(Car.getDetail());
+p1.fullName = "Avinash Sharma";
+
+console.log(p.firstName);
+console.log(p.lastName);
 
 /*-----------------------------------------------------------------------------------------
 Summary
