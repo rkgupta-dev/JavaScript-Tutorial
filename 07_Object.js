@@ -277,6 +277,17 @@ p1.fullName = "Avinash Sharma";
 console.log(p.firstName);
 console.log(p.lastName);
 
+
+
+//-----------------------------------Questions Practice---------------------------------
+/*
+1. Create a function using the "function" keyword that takes a String as an argument & return the 
+ number of vowels in the string */
+
+
+
+
+
 /*-----------------------------------------------------------------------------------------
 Summary
 *An object is a collection of key-value pairs, where keys are strings (or symbols) and values can be
