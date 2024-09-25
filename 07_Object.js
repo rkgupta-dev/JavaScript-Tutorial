@@ -281,8 +281,37 @@ console.log(p.lastName);
 
 //-----------------------------------Questions Practice---------------------------------
 /*
-1. Create a function using the "function" keyword that takes a String as an argument & return the 
- number of vowels in the string */
+1. Write a function to list the properties of a Javascript object. */
+
+function ListOfProperty(laptop) {
+  return Object.entries(laptop);
+}
+
+const laptop = {
+  brand: "lenovo",
+  color: "black",
+  model: "ES-204",
+}
+
+console.log(ListOfProperty(laptop));
+
+/*
+2. Write a function to delete the roll no. property. Also print the object before or after
+   deleting the property. */
+
+function deleteItem(std){
+  return Object.entries(std);
+}
+
+let student1 = {
+  name: "Divisha",
+  class: "VI",
+  rollno: "3"
+}
+
+console.log("Before Deletion:", deleteItem(student1));
+delete student1.rollno;
+console.log("After Deletion:", deleteItem(student1));
 
 
 
