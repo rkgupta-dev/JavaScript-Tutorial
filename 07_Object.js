@@ -253,7 +253,7 @@ const p = {
   // Getter for fullName
   get fullName() {
     return `${this.firstName} ${this.lastName}`;
-  }
+  },
 };
 
 console.log(p.fullName);
@@ -269,15 +269,13 @@ const p1 = {
     const parts = value.split("");
     this.firstName = parts[0];
     this.lastName = parts[1];
-  }
-}
+  },
+};
 
 p1.fullName = "Avinash Sharma";
 
 console.log(p.firstName);
 console.log(p.lastName);
-
-
 
 //-----------------------------------Questions Practice---------------------------------
 /*
@@ -291,7 +289,7 @@ const laptop = {
   brand: "lenovo",
   color: "black",
   model: "ES-204",
-}
+};
 
 console.log(ListOfProperty(laptop));
 
@@ -299,22 +297,53 @@ console.log(ListOfProperty(laptop));
 2. Write a function to delete the roll no. property. Also print the object before or after
    deleting the property. */
 
-function deleteItem(std){
+function propItem(std) {
   return Object.entries(std);
 }
 
 let student1 = {
   name: "Divisha",
   class: "VI",
-  rollno: "3"
-}
+  rollno: "3",
+};
 
-console.log("Before Deletion:", deleteItem(student1));
+console.log("Before Deletion:", propItem(student1));
 delete student1.rollno;
-console.log("After Deletion:", deleteItem(student1));
+console.log("After Deletion:", propItem(student1));
 
+/*
+3. Show the ways to access the property rollno of the above given object. */
 
+student1.rollno = 5;
 
+console.log(student1.rollno); // using Dot notation
+console.log(student1["rollno"]); // using Bracket
+
+/*
+4. Write a function to display the reading status (i.e. display book name, author name and reading status) 
+   of the following books. */
+
+let library = [
+  {
+    autor: "Bill Gate",
+    title: "The Road Ahead",
+    readingStatus: true,
+  },
+  {
+    autor: "Steve Jobs",
+    title: "Walter Isaacson",
+    readingStatus: true,
+  },
+  {
+    autor: "Suzanne Collins",
+    title: "Mockingjay: The Final Book of The Hunger Games",
+    readingStatus: false,
+  },
+];
+
+library.forEach((library) => {
+  console.log(Object.values(library));
+})
 
 
 /*-----------------------------------------------------------------------------------------
