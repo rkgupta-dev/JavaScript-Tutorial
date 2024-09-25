@@ -345,6 +345,28 @@ library.forEach((library) => {
   console.log(Object.values(library));
 })
 
+/*
+Write function that checks if a specific property exists in an object. */
+let student2 = {
+  name: "Akhil",
+  age: 6,
+  rollno: "7"
+};
+
+function hasProperty(key, value) {
+  if (key.hasOwnProperty(value)) {
+    return console.log(`${value} is available in the object.`);
+  } else {
+    return console.log(`${value} is NOT available in the object.`);
+  }
+}
+
+hasProperty(student, 'name');
+hasProperty(student, 'class');
+
+
+
+
 
 /*-----------------------------------------------------------------------------------------
 Summary
