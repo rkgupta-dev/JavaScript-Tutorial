@@ -355,7 +355,7 @@ let student2 = {
   rollno: "7"
 };
 
-function hasProperty(key, value) {
+function property(key, value) {                 
   if (key.hasOwnProperty(value)) {
     return console.log(`${value} is available in the object.`);
   } else {
@@ -363,8 +363,8 @@ function hasProperty(key, value) {
   }
 }
 
-hasProperty(student2, 'name');
-hasProperty(student2, 'class');
+property(student2, 'name');
+property(student2, 'city');
 
 
 
