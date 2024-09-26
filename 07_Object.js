@@ -341,9 +341,11 @@ let library = [
   },
 ];
 
-library.forEach((library) => {
-  console.log(Object.values(library));
+
+library.forEach((obj) => {
+  console.log(Object.values(obj));
 })
+console.log(Object.values(library));
 
 /*
 Write function that checks if a specific property exists in an object. */
@@ -361,8 +363,8 @@ function hasProperty(key, value) {
   }
 }
 
-hasProperty(student, 'name');
-hasProperty(student, 'class');
+hasProperty(student2, 'name');
+hasProperty(student2, 'class');
 
 
 
