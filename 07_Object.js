@@ -401,6 +401,28 @@ empAge.filter(emp => sumOfAges += emp.age);
 console.log(`Sum of all employees = ${sumOfAges}`);
 
 
+/*
+8. In the below given object - "region"
+   Insert "subregions" property whose value will be "maharashtra" whose value will be 
+   the given object "cityDetails" */
+
+let region = { 
+    name: "Western Region",
+};
+
+let cityDetails = { 
+    cityName: "Mumbai", 
+    population: 12500000 
+};
+
+// console.log(region);
+
+region.subregions = {
+  maharashtra: cityDetails,
+}
+
+console.log(region);
+
 
 /*-----------------------------------------------------------------------------------------
 Summary
