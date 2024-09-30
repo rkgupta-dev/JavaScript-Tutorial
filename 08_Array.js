@@ -98,3 +98,9 @@ console.log(last);     // Output: 3
 console.log(num1);  // Output: [1, 2]
 
 
+const bikes = ["Activa", "Honda", "Avenger"];
+console.log(`Before pop = ${bikes}`);
+bikes.pop("Pulsar");
+console.log(`After pop = ${bikes}`);
+
+
