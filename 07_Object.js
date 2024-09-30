@@ -341,10 +341,9 @@ let library = [
   },
 ];
 
-
 library.forEach((obj) => {
   console.log(Object.values(obj));
-})
+});
 console.log(Object.values(library));
 
 /*
@@ -352,10 +351,10 @@ console.log(Object.values(library));
 let student2 = {
   name: "Akhil",
   age: 6,
-  rollno: "7"
+  rollno: "7",
 };
 
-function property(key, value) {                 
+function property(key, value) {
   if (key.hasOwnProperty(value)) {
     return console.log(`${value} is available in the object.`);
   } else {
@@ -363,8 +362,8 @@ function property(key, value) {
   }
 }
 
-property(student2, 'name');
-property(student2, 'city');
+property(student2, "name");
+property(student2, "city");
 
 /*
 6. Return the object where the employee name = Bhargava. */
@@ -384,45 +383,66 @@ let employees_data = [
     employee_id: 3,
     employee_name: "Chaitanya",
     age: 26,
-  }
-]
+  },
+];
 
-const Data = employees_data.find(emp => emp.employee_name === "Bhargava");
+const Data = employees_data.find((emp) => emp.employee_name === "Bhargava");
 console.log(Data);
 
 /*
 7. Return the sum of the age of all the employees_data from above object using filjter method. */
 
-const empAge = employees_data.filter(emp => emp.age !== undefined);
+const empAge = employees_data.filter((emp) => emp.age !== undefined);
 
 let sumOfAges = 0;
-empAge.filter(emp => sumOfAges += emp.age);
+empAge.filter((emp) => (sumOfAges += emp.age));
 
 console.log(`Sum of all employees = ${sumOfAges}`);
-
 
 /*
 8. In the below given object - "region"
    Insert "subregions" property whose value will be "maharashtra" whose value will be 
    the given object "cityDetails" */
 
-let region = { 
-    name: "Western Region",
+let region = {
+  name: "Western Region",
 };
 
-let cityDetails = { 
-    cityName: "Mumbai", 
-    population: 12500000 
+let cityDetails = {
+  cityName: "Mumbai",
+  population: 12500000,
 };
 
 // console.log(region);
 
 region.subregions = {
   maharashtra: cityDetails,
-}
+};
 
 console.log(region);
 
+/*
+9. Given the employees_data array, create a new array of employee objects where each employee object includes
+   an additional property isSenior, which is true if the employee's age is 30 or above, and false otherwise. 
+   The original array should remain unchanged. */
+
+/*
+10. You have an object representing a company with departments. Each department contains employees. 
+    Write a function to remove all employees with a salary less than 50,000 from every department in 
+    the company object. The structure of the object is: */
+
+let company = {
+  departments: {
+    engineering: [
+      { name: "Alice", salary: 60000 },
+      { name: "Bob", salary: 45000 },
+    ],
+    marketing: [
+      { name: "Charlie", salary: 55000 },
+      { name: "David", salary: 40000 },
+    ],
+  },
+};
 
 /*-----------------------------------------------------------------------------------------
 Summary
