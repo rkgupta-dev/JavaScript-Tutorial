@@ -24,11 +24,68 @@ const fruit = ["mango", "apple", "orange", "lichi"];
 
 console.log(fruit);
 
-
 // 2. Using Array directly (new keyword)
-
 
 let numbers = new Array();
 numbers[0] = 10;
 numbers[1] = 30;
-console.log(numbers);
+console.log(numbers); // Output: [ 10, 30 ]
+
+const emptyArray = new Array();
+console.log(emptyArray); // Output: []
+
+const arrayWithLength = new Array(5);
+// arrayWithLength[2] = "Rohit";
+console.log(arrayWithLength); // Output: [ <5 empty items> ]
+
+// 3.  Using Array constructor (new keyword)
+
+const number = new Array(1, 2, 3, 4, 5);
+
+console.log(number);
+
+const color = new Array("Red", "Yellow", "Orange", "Green");
+
+console.log(color);
+
+/*
+# Accessing Elements in an Array: You can access elements in an array using their index.
+  Remember that the first element has an index of 0. */
+
+const colors = ["Red", "Green", "Blue"];
+console.log(colors); // Output: [ 'Red', 'Green', 'Blue' ]
+console.log(colors[0]); // Output: "Red"
+console.log(colors[2]); // Output: "Blue"
+
+/*
+# Modifying an Array: You can change the value of elements in an array by
+  assigning a new value to a specific index. */
+
+const animals = ["Dog", "Cat", "Elephant"];
+animals[1] = "Tiger";
+console.log(animals); // Output: ["Dog", "Tiger", "Elephant"]
+
+// You can also add new elements by assigning values to indices beyond the current length of the array:
+
+animals[3] = "Lion";
+console.log(animals); // Output: ["Dog", "Tiger", "Elephant", "Lion"]
+
+/*
+# Common Array Methods: JavaScript provides many built-in methods to manipulate arrays.
+
+1. push(): Adds one or more elements to the end of an array. */
+
+const num = [1, 2, 3, 4];
+
+console.log(`Before push = ${num}`);
+num.push(5);
+console.log(`After push = ${num}`);
+
+
+const bike = ["Activa", "Honda", "Avenger"];
+
+console.log(`Before push = ${bike}`);
+bike.push("Pulsar");
+console.log(`After push = ${bike}`);
+console.log(typeof(bike));
+
