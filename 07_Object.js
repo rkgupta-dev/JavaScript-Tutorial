@@ -348,7 +348,7 @@ library.forEach((obj) => {
 console.log(Object.values(library));
 
 /*
-4. Write function that checks if a specific property exists in an object. */
+5. Write function that checks if a specific property exists in an object. */
 let student2 = {
   name: "Akhil",
   age: 6,
@@ -367,7 +367,7 @@ property(student2, 'name');
 property(student2, 'city');
 
 /*
-5. Return the object where the employee name = Bhargava. */
+6. Return the object where the employee name = Bhargava. */
 
 let employees_data = [
   {
@@ -390,6 +390,15 @@ let employees_data = [
 const Data = employees_data.find(emp => emp.employee_name === "Bhargava");
 console.log(Data);
 
+/*
+7. Return the sum of the age of all the employees_data from above object using filjter method. */
+
+const empAge = employees_data.filter(emp => emp.age !== undefined);
+
+let sumOfAges = 0;
+empAge.filter(emp => sumOfAges += emp.age);
+
+console.log(`Sum of all employees = ${sumOfAges}`);
 
 
 
