@@ -89,3 +89,12 @@ bike.push("Pulsar");
 console.log(`After push = ${bike}`);
 console.log(typeof(bike));
 
+
+// 2. pop(): Removes the last element from an array and returns it.
+
+const num1 = [1, 2, 3];
+const last = num1.pop();  // Removes 3
+console.log(last);     // Output: 3
+console.log(num1);  // Output: [1, 2]
+
+
