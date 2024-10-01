@@ -111,3 +111,13 @@ num2.shift();
 console.log(num2);    // After shift Output: [ 20, 30, 40 ]
 
 // const color1 = ["red", "black", "blue"];
+
+
+//-----------------------------------Questions Practice---------------------------------
+
+arr1 = [1, 2, 3, 4];
+arr2 = [1, 2, 3, 4];
+
+console.log(arr1==arr2); // Output: false, because in arr1 & arr2 same element but arr1 & arr2 store in different addresses of memory.
+
+
