@@ -77,16 +77,16 @@ console.log(animals); // Output: ["Dog", "Tiger", "Elephant", "Lion"]
 
 const num = [1, 2, 3, 4];
 
-console.log(`Before push = ${num}`);
+console.log(`Before push numbers = ${num}`);
 num.push(5);
-console.log(`After push = ${num}`);
+console.log(`After push numbers = ${num}`);
 
 
 const bike = ["Activa", "Honda", "Avenger"];
 
-console.log(`Before push = ${bike}`);
+console.log(`Before push bikes = ${bike}`);
 bike.push("Pulsar");
-console.log(`After push = ${bike}`);
+console.log(`After push bikes = ${bike}`);
 console.log(typeof(bike));
 
 
@@ -103,4 +103,11 @@ console.log(`Before pop = ${bikes}`);
 bikes.pop("Pulsar");
 console.log(`After pop = ${bikes}`);
 
+// 3. shift(): Removes the first element from an array and shifts all other elements to a lower index.
 
+const num2 = [10, 20, 30, 40];
+console.log(num2);    // Before shift Output: [ 10, 20, 30, 40 ]
+num2.shift();
+console.log(num2);    // After shift Output: [ 20, 30, 40 ]
+
+// const color1 = ["red", "black", "blue"];
