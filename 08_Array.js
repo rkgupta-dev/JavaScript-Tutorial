@@ -81,22 +81,19 @@ console.log(`Before push numbers = ${num}`);
 num.push(5);
 console.log(`After push numbers = ${num}`);
 
-
 const bike = ["Activa", "Honda", "Avenger"];
 
 console.log(`Before push bikes = ${bike}`);
 bike.push("Pulsar");
 console.log(`After push bikes = ${bike}`);
-console.log(typeof(bike));
-
+console.log(typeof bike);
 
 // 2. pop(): Removes the last element from an array and returns it.
 
 const num1 = [1, 2, 3];
-const last = num1.pop();  // Removes 3
-console.log(last);     // Output: 3
-console.log(num1);  // Output: [1, 2]
-
+const last = num1.pop(); // Removes 3
+console.log(last); // Output: 3
+console.log(num1); // Output: [1, 2]
 
 const bikes = ["Activa", "Honda", "Avenger"];
 console.log(`Before pop = ${bikes}`);
@@ -106,14 +103,55 @@ console.log(`After pop = ${bikes}`);
 // 3. shift(): Removes the first element from an array and shifts all other elements to a lower index.
 
 const num2 = [10, 20, 30, 40];
-console.log(num2);    // Before shift Output: [ 10, 20, 30, 40 ]
+console.log(num2); // Before shift Output: [ 10, 20, 30, 40 ]
 num2.shift();
-console.log(num2);    // After shift Output: [ 20, 30, 40 ]
+console.log(num2); // After shift Output: [ 20, 30, 40 ]
 
 const color1 = ["red", "black", "blue"];
-console.log(color1);      // Before shift Output: [ 'red', 'black', 'blue' ]
+console.log(color1); // Before shift Output: [ 'red', 'black', 'blue' ]
 color1.shift();
-console.log(color1);      // After shift Output: [ 'black', 'blue' ]
+console.log(color1); // After shift Output: [ 'black', 'blue' ]
+
+// 4. unshift(): Adds one or more elements to the beginning of an array.
+
+const name = ["Akhil", "Prem", "Raja"];
+console.log(name);
+name.unshift("Rohit");
+console.log(name);
+
+// 5. length: Returns the number of elements in an array.
+
+const arr = [1, 2, 3, 4, 5, 6];
+
+console.log(arr.length);
+
+// 6. splice(): Adds or removes elements at a specific index.
+// * To remove elements:
+
+const num3 = [1, 2, 3, 4, 5];
+
+num3.splice(1, 2);
+
+console.log(num3);
+
+// * To add elements:
+
+const num4 = [1, 2, 5, 6];
+
+num4.splice(2, 0, 3, 4);
+
+console.log(num4);
+
+// 7. slice(): Returns a new array with selected elements, without modifying the original array.
+
+const fruits = ["Apple", "Banana", "Mango", "Orange", "Kiwi"];
+const citrus = fruits.slice(2, 4);   // Takes elements at index 2 and 3
+console.log(citrus);                 // Output: ["Mango", "Orange"]
+console.log(fruits);                 // Output: [ 'Apple', 'Banana', 'Mango', 'Orange', 'Kiwi' ]
+
+
+
+
 
 
 //-----------------------------------Questions Practice---------------------------------
@@ -121,6 +159,4 @@ console.log(color1);      // After shift Output: [ 'black', 'blue' ]
 arr1 = [1, 2, 3, 4];
 arr2 = [1, 2, 3, 4];
 
-console.log(arr1==arr2); // Output: false, because in arr1 & arr2 same element but arr1 & arr2 store in different addresses of memory.
-
-
+console.log(arr1 == arr2); // Output: false, because in arr1 & arr2 same element but arr1 & arr2 store in different addresses of memory.
