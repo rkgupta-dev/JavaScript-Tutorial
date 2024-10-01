@@ -110,7 +110,10 @@ console.log(num2);    // Before shift Output: [ 10, 20, 30, 40 ]
 num2.shift();
 console.log(num2);    // After shift Output: [ 20, 30, 40 ]
 
-// const color1 = ["red", "black", "blue"];
+const color1 = ["red", "black", "blue"];
+console.log(color1);      // Before shift Output: [ 'red', 'black', 'blue' ]
+color1.shift();
+console.log(color1);      // After shift Output: [ 'black', 'blue' ]
 
 
 //-----------------------------------Questions Practice---------------------------------
