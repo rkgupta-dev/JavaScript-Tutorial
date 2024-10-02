@@ -29,3 +29,35 @@ console.log(specificDate1);
 
 const dateFromMilliseconds = new Date(0);
 console.log(dateFromMilliseconds);  
+
+console.log("-------------------")
+
+
+// # Common Date Methods in javascript
+
+const date = new Date();
+
+console.log("Year:", date.getFullYear());                  // Output: current year (e.g., 2024)
+
+console.log("Month:", date.getMonth());                    // Output: current month (0-indexed)
+
+console.log("Date:", date.getDate());                      // Output: current day of the month
+
+console.log("Week Day:", date.getDay());                   // Output: current day of the week (0-indexed)
+
+console.log("Hour:", date.getHours());                     // Output: current hour
+
+console.log("Minutes:", date.getMinutes());                // Output: current minutes
+
+console.log("Seconds:", date.getSeconds());                // Output: current seconds
+
+console.log("Milliseconds", date.getMilliseconds());       // Output: milliseconds since Unix Epoch
+
+
+
+/*----------------------------------------------------------------------------------------------
+Summary
+* The Date object in JavaScript is used to represent dates and times.
+* You can create a date object for the current date or a specific date.
+* It provides methods to get and set various components like the year, month, day, hours, minutes, etc.
+* Date objects also allow formatting and comparison of dates. */
