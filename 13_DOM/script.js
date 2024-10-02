@@ -112,3 +112,8 @@ document.getElementById("myButton").addEventListener("click", function() {
     alert("Button was clicked!");
   });
   
+
+
+document.body.style.backgroundColor="green"  // the web page background color change into green
+
+document.getElementById("myButton").style.backgroundColor="white"
