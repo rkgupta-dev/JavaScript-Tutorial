@@ -54,7 +54,6 @@ console.log("Seconds:", date.getSeconds());                // Output: current se
 console.log("Milliseconds", date.getMilliseconds());       // Output: milliseconds since Unix Epoch
 
 
-
 /*----------------------------------------------------------------------------------------------
 Summary
 * The Date object in JavaScript is used to represent dates and times.
