@@ -1,0 +1,16 @@
+body{
+    background-color: rgb(167, 197, 223);
+}
+
+h1{
+    color: rgb(192, 133, 6);
+}
+
+p{
+    color: blueviolet;
+}
+
+button{
+    background-color: darkcyan;
+    
+}
