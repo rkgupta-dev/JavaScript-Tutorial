@@ -169,5 +169,31 @@ if (isMember) {
 let ages = 18;
 let isAdult = ages >= 18;  // Returns true or false based on the comparison
 
-console.log(isAdult);  // Output: true
+console.log("You can Vote", isAdult);  // Output: true
 
+
+/*
+# Logical Operators with Booleans
+   1. AND (&&): Returns true if both operands are true.                     */
+
+console.log(true && true);  // Output: true
+console.log(true && false);  // Output: false
+
+
+// 2. OR (||): Returns true if at least one operand is true.
+
+console.log(true || false);  // Output: true
+
+
+// 3. NOT (!): Negates a Boolean value.
+
+console.log(!true);  // Output: false
+console.log(!false);  // Output: true
+
+
+/*
+Summary
+* Booleans represent logical values: true or false.
+* JavaScript treats certain values as truthy (like non-empty strings and non-zero numbers) and 
+  others as falsy (like 0, "", null, undefined, and NaN).
+* Booleans are widely used in conditional statements and logical operations.                          */
