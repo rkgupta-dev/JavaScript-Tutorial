@@ -62,6 +62,9 @@ const brand = "SAMSUNG";
 const lower = brand.toLowerCase();
 console.log(lower);
 
+const upper1 = brand.toUpperCase();
+console.log(upper1);
+
 
 // 3. charAt(): Returns the character at a specific index.
 
