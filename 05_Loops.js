@@ -3,7 +3,7 @@
 -> Loops in JavaScript are used to repeatedly execute a block of code as long as a specified condition is true.
 
 # Types of Loops in JavaScript.
--> There are for types of JavaScript
+-> There are Six types of loops in JavaScript
 1. for Loop
 2. while Loop
 3. do-while Loop
@@ -60,7 +60,7 @@ for (key in object) {
 }
 */
 
-let student = { name: "Rohit", age: 26, city: "Ranchi" };
+let student = { name: "Rohit", age: 25, city: "Ranchi" };
 for (let key in student) {
   console.log(key + ": " + student[key]);
 }
@@ -155,5 +155,6 @@ while loop: Repeats as long as the condition is true.
 do...while loop: Always runs at least once before checking the condition.
 for...in loop: Iterates over the properties of an object.
 for...of loop: Iterates over the values of iterable objects like arrays and strings.
+forEach() loop: It is an array method that executes a provided function once for each array element.
 Loops help automate repetitive tasks in JavaScript, making your code efficient and concise!
 */
