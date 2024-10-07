@@ -65,3 +65,46 @@ console.log(smartPhone.specification);
 
 console.log(smartPhone.specification.memory.storage); // Output: 128GB
 console.log(smartPhone.specification.camera.front); // Output: 12MP
+
+// 3. Object with Arrays
+
+const student = {
+  name: "Akhil",
+  marks: ["Hindi-70", "Eng-80", "Math-94"],
+  details: function () {
+    return `${this.name} scored in final exam ${this.marks}`;
+  },
+};
+
+console.log(student.details());
+
+const students = {
+  name: "Rohit",
+  grades: [90, 85, 80, 75],
+  avgGrade: function () {
+    let sum = this.grades.reduce((a, b) => a + b, 0);
+    return sum / this.grades.length;
+  },
+};
+
+console.log(students.avgGrade());
+
+// 4. Factory Function to Create Objects
+
+function createBook(title, author) {
+  return {
+    title: title,
+    author: author,
+    getDetails: function () {
+      return `${this.title} written by ${this.author}`;
+    },
+  };
+}
+
+const Book1 = createBook("Don Quixote", "Miguel de Cervantes");
+
+const Book2 = createBook("The Adventures of Tom Sawyer", "Mark Twain");
+
+console.log(Book1.getDetails());
+console.log(Book2.getDetails());
+
