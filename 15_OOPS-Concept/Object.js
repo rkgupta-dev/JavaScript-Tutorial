@@ -121,3 +121,25 @@ console.log(user.email); // Output: nikhilraj@123gmail.com
 delete user.age; // Deleting property
 console.log(user.age); // Output: undefined
 
+// 6. Object with Getters and Setters
+
+const person1 = {
+  firstName: "Rajeev",
+  lastName: "Mishra",
+
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  },
+
+  set fullName(name) {
+    let parts = name.split(" ");
+    this.firstName = parts[0];
+    this.lastName = parts[1];
+  },
+};
+
+console.log(person1.fullName); // Output: Rajeev Mishra
+
+person1.fullName = "Rohit Kumar"; // assign
+
+console.log(person1.fullName); // Output: Rohit Kumar
