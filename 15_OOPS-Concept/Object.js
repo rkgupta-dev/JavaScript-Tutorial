@@ -108,3 +108,16 @@ const Book2 = createBook("The Adventures of Tom Sawyer", "Mark Twain");
 console.log(Book1.getDetails());
 console.log(Book2.getDetails());
 
+// 5. Object with Dynamic Properties
+
+const user = {
+  name: "Nikhil",
+  age: 10,
+};
+
+user.email = "nikhilraj@123gmail.com"; // Adding new property
+console.log(user.email); // Output: nikhilraj@123gmail.com
+
+delete user.age; // Deleting property
+console.log(user.age); // Output: undefined
+
