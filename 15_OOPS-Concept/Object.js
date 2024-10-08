@@ -166,3 +166,29 @@ console.log(more.details()); // Output: Apple is very Sweet.
 
 // 8. Object with Methods Referencing this
 
+const myProfile = {
+  firstName: "Rohit",
+  lastName: "Gupta",
+  position: "Frontend Developer",
+  getInfo: function () {
+    return `${this.firstName} ${this.lastName} is a ${this.position}`;
+  },
+};
+
+console.log(myProfile.getInfo()); // Output: Rohit Gupta is a Frontend Developer
+
+// 9. Using Object.assign()
+
+const target = {
+  a: 1,
+  b: 2,
+};
+
+const source = {
+  b: 4,
+  c: 5,
+};
+
+const result = Object.assign(target, source);
+
+console.log(result);  // Output: { a: 1, b: 4, c: 5 }
