@@ -191,4 +191,15 @@ const source = {
 
 const result = Object.assign(target, source);
 
-console.log(result);  // Output: { a: 1, b: 4, c: 5 }
+console.log(result); // Output: { a: 1, b: 4, c: 5 }
+
+// 10. Object with Symbol Properties
+
+const sym = Symbol("id");
+
+const users = {
+  name: "Rohit",
+  [sym]: 12345,
+};
+
+console.log(users[sym]);
