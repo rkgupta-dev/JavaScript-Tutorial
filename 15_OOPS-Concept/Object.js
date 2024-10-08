@@ -143,3 +143,26 @@ console.log(person1.fullName); // Output: Rajeev Mishra
 person1.fullName = "Rohit Kumar"; // assign
 
 console.log(person1.fullName); // Output: Rohit Kumar
+
+// 7. Using Object.create()
+
+const fruit = {
+  fruitName: "Mango",
+  taste: "Sweet",
+  details: function () {
+    return `${this.fruitName} is very ${this.taste}.`;
+  },
+};
+
+console.log(fruit.details()); // Output: Mango is very Sweet.
+
+const more = Object.create(fruit); // created a object using Object.create() fn
+
+more.fruitName = "Apple"; // assign Apple in more.fruitName
+
+console.log(more.fruitName); // Output: Apple
+
+console.log(more.details()); // Output: Apple is very Sweet.
+
+// 8. Object with Methods Referencing this
+
