@@ -4,7 +4,7 @@
    real-world entities, allowing you to structure your code in a more modular, reusable, and maintainable way. 
    OOP revolves around the concept of objects and the use of methods to manipulate the data within these objects. 
    
-1. Object
+# Object
 -> Objects: In JavaScript, an object is a collection of properties, where a property is an association between
    a name (or key) and a value. Objects can contain data (known as properties) and functionality (known as methods).  
 
