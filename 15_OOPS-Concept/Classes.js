@@ -54,3 +54,65 @@ class Car {
 const car = new Car("Tata", "200/kmph");
 
 console.log(car.info());
+
+/*
+Key Points Class Declaration:
+Named:- In a class declaration, the class has a name (e.g., Rectangle).
+
+Not hoisted:- Unlike function declarations, class declarations are not hoisted. 
+              You cannot use the class before it’s declared.
+*/
+
+// Uncaught ReferenceError: Cannot access 'Rectangle' before initialization
+// const rect = new Rectangle(10, 5);  // uncomment and get above error
+
+class Rectangle {
+  constructor(width, height) {
+    this.width = width;
+    this.height = height;
+  }
+}
+
+/*------------------------------------------------------------------------------------------------------------
+2. Class Expression
+-> A class expression is another way to define a class. It can be either named or anonymous. Just like function
+   expressions, class expressions allow for more flexible naming and can be defined inline.
+
+-> Another way to define a class is by using a class expression. Here, it is not mandatory to assign the name of
+   the class. So, the class expression can be named or unnamed. The class expression allows us to fetch the class
+   name. However, this will not be possible with class declaration.
+*/
+
+// i. Anonymous Class Expression (Unnamed Class Expression)
+
+const laptop = class {
+  constructor(brand, color) {
+    this.brand = brand;
+    this.color = color;
+  }
+
+  getInfo(){
+    return `This ${this.brand} laptop ${this.color} in color.`
+  }
+};
+
+const info = new laptop("Lenovo", "white");
+
+console.log(info.getInfo());
+
+// ii. Named Class Expression (Unnamed Class Expression)
+
+const Rectangle1 = class Rect {
+    constructor(height, width) {
+        this.height = height;
+        this.width = width;
+    }
+
+    getArea() {
+        return this.height * this.width;
+    }
+}
+
+const area = new Rectangle1(5, 10);
+
+console.log(area.getArea());
