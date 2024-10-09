@@ -8,7 +8,7 @@
    function declarations and function expressions.
 
 
-* In JavaScript, classes can be created using two main approaches: class declarations and class expressions.
+# In JavaScript, classes can be created using two main approaches: class declarations and class expressions.
   Both ways are used to define classes, but there are some subtle differences between them, especially in terms
   of how they are hoisted and named.
 

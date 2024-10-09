@@ -203,3 +203,14 @@ const users = {
 };
 
 console.log(users[sym]);
+
+
+/*------------------------------------------------------------------------------------------------
+Summary of OOP Concepts in JavaScript:
+Objects:- Real-life things represented in code with properties and methods.
+Classes:- Blueprints to create multiple objects with the same structure.
+Encapsulation:- Grouping data and behavior in one object and controlling access.
+Inheritance:- Reusing code by creating classes based on other classes.
+Polymorphism:- Same method names, but different behaviors for different objects.
+Abstraction:- Hiding complex details and showing only the essentials.
+*/
