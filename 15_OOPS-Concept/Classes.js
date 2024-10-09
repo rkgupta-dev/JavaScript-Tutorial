@@ -56,7 +56,7 @@ const car = new Car("Tata", "200/kmph");
 console.log(car.info());
 
 /*
-Key Points Class Declaration:
+Key Points of Class Declaration:
 Named:- In a class declaration, the class has a name (e.g., Rectangle).
 
 Not hoisted:- Unlike function declarations, class declarations are not hoisted. 
@@ -91,8 +91,8 @@ const laptop = class {
     this.color = color;
   }
 
-  getInfo(){
-    return `This ${this.brand} laptop ${this.color} in color.`
+  getInfo() {
+    return `This ${this.brand} laptop ${this.color} in color.`;
   }
 };
 
@@ -102,17 +102,72 @@ console.log(info.getInfo());
 
 // ii. Named Class Expression (Unnamed Class Expression)
 
-const Rectangle1 = class Rect {
-    constructor(height, width) {
-        this.height = height;
-        this.width = width;
-    }
+var Rectangle1 = class Rect {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
 
-    getArea() {
-        return this.height * this.width;
-    }
-}
+  getArea() {
+    return this.height * this.width;
+  }
+};
 
 const area = new Rectangle1(5, 10);
 
 console.log(area.getArea());
+
+// Class Expression can re-declare (Re-declaring Class)
+var Rectangle1 = class Add {
+  constructor(num1, num2) {
+    this.num1 = num1;
+    this.num2 = num2;
+  }
+  getSum() {
+    return this.num1 + this.num2;
+  }
+};
+
+const sum = new Rectangle1(23, 7);
+
+console.log(sum.getSum());
+
+
+/*
+Key Points of Class Expression:
+Can be named or anonymous:- Class expressions can have names, but the name is only available inside the 
+                            class definition.
+Not hoisted:- Like class declarations, class expressions are also not hoisted. They cannot be used 
+              before they are defined.
+*/
+
+/*
+## Differences Between Class Declarations and Expressions
+1. Naming:
+-> In a class declaration, the class is always named.
+-> In a class expression, the class can be either named or anonymous. 
+   If named, the name is local to the class’s scope.
+
+2. Hoisting:
+-> Class declarations are not hoisted. You cannot use the class before its declaration in the code.
+-> Class expressions are also not hoisted.
+
+3. Flexibility:
+-> Class expressions offer more flexibility because they can be anonymous or named, and you can define
+   them inline in functions or pass them as arguments to other functions.
+*/
+
+
+/*
+Summary
+* Class Declaration
+-> Defines a named class using the class keyword. Not hoisted.*/
+
+   class MyClass1 {  }
+
+/*
+* Class Expression
+-> Defines a class either anonymously or with a name. Can be used inline. Not hoisted. */
+
+const MyClass2 = class {    }; 
+const MyClass3 = class Name{    }; 
