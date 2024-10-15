@@ -59,6 +59,27 @@ console.log(person1.info());
    which is Object.prototype.
 */
 
+function Employee(firstName, lastName) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+}
+
+Employee.prototype.fullName = function () {
+  return `${this.firstName} ${this.lastName}`;
+};
+
+const emp1 = new Employee("Rohit", "Gupta");
+console.log(emp1.fullName());
+
+Employee.prototype.allDeatials = function () {
+  return `${this.firstName} ${this.lastName} work in ${this.company}`;
+};
+
+Employee.prototype.company = "Ontrack";
+
+const emp2 = new Employee("Rajeev", "Mishra");
+console.log(emp2.allDeatials());
+
 // Define a constructor function
 function Animal(name) {
   this.name = name;
@@ -87,3 +108,30 @@ const myDog = new Dog("Puppy");
 
 myDog.bark(); // Output: Puppy bark!
 myDog.speak(); // Output: Puppy make a sound
+
+function TataCar(model) {
+  this.model = model;
+}
+
+TataCar.prototype.details = function () {
+  console.log(`${this.model} highest speed is 500kmph`);
+};
+
+const model1 = new TataCar("Harrier");
+
+model1.details();
+
+function Model(name) {
+  TataCar.call(this, name);
+}
+
+Model.prototype = Object.create(TataCar.prototype);
+
+Model.prototype.start = function () {
+  console.log(`${this.model} is started!`);
+};
+
+const myCar = new Model("Safari");
+
+myCar.details();
+myCar.start();
