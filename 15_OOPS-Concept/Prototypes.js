@@ -47,6 +47,18 @@ const person1 = new Person("Shilton", 50);
 
 console.log(person1.info());
 
+function Mobile(name){
+   this.name = name;
+}
+
+Mobile.prototype.specification = function(){
+   console.log(`${this.name} is best mobile in India.`);
+}
+
+const mob = new Mobile("Motorola");
+
+mob.specification();
+
 /*
 2. Prototype Chain
 -> In JavaScript, each object contains a prototype object that acquires properties and methods from it.
