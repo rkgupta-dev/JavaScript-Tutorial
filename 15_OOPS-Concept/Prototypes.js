@@ -20,35 +20,32 @@
 
 */
 
-function Addition(num1, num2){
-    this.num1 = num1;
-    this.num2 = num2;
+function Addition(num1, num2) {
+  this.num1 = num1;
+  this.num2 = num2;
 }
 
-Addition.prototype.add = function(){
-    const sum = this.num1 + this.num2;
-    return `The sum of ${this.num1} and ${this.num2} = ${sum} `
+Addition.prototype.add = function () {
+  const sum = this.num1 + this.num2;
+  return `The sum of ${this.num1} and ${this.num2} = ${sum} `;
+};
+
+const first = new Addition(24, 6);
+
+console.log(first.add()); // Output: The sum of 24 and 6 = 30
+
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
 }
 
-
-const first = new Addition(24, 6); 
-
-console.log(first.add());        // Output: The sum of 24 and 6 = 30  
-
-
-function Person(name, age){
-   this.name = name;
-   this.age = age;
-}
-
-Person.prototype.info = function(){
-   return `Hello, My name ${this.name} & i am ${this.age}`;
-}
+Person.prototype.info = function () {
+  return `Hello, My name ${this.name} & i am ${this.age}`;
+};
 
 const person1 = new Person("Shilton", 50);
 
 console.log(person1.info());
-
 
 /*
 2. Prototype Chain
@@ -62,3 +59,31 @@ console.log(person1.info());
    which is Object.prototype.
 */
 
+// Define a constructor function
+function Animal(name) {
+  this.name = name;
+}
+
+Animal.prototype.speak = function () {
+  console.log(`${this.name} make a sound`); // Output: Dog make a sound
+};
+
+const animal1 = new Animal("Dog");
+animal1.speak();
+
+// Define a second constructor function
+function Dog(name) {
+  Animal.call(this, name); // Inherit the name property from Animal
+}
+
+// Set the prototype of Dog to be an instance of Animal
+Dog.prototype = Object.create(Animal.prototype);
+
+Dog.prototype.bark = function () {
+  console.log(`${this.name} bark!`);
+};
+
+const myDog = new Dog("Puppy");
+
+myDog.bark(); // Output: Puppy bark!
+myDog.speak(); // Output: Puppy make a sound
