@@ -89,3 +89,67 @@ console.log(User.compareAge(user1, user2));
 -> Static methods can also be added to constructor functions (older JavaScript syntax) by assigning them
    directly to the constructor. */
 
+function Car(make, model) {
+  this.make = make;
+  this.model = model;
+}
+
+// Adding a static method
+Car.honk = function () {
+  return "Beep beep!";
+};
+
+const myCar = new Car("Toyota", "Corolla");
+
+// Call the static method on the constructor
+console.log(Car.honk()); // Output: "Beep beep!"
+
+// Cannot call static method on an instance
+// console.log(myCar.honk()); // Error: myCar.honk is not a function
+
+/*
+4. Static Methods and Inheritance
+-> Static methods are inherited by subclasses. If you create a class that extends another class, 
+   the subclass will inherit the static methods of the parent class.*/
+
+class Animal {
+  static isAnimal(obj) {
+    return obj instanceof Animal;
+  }
+}
+
+class Dog extends Animal {}
+
+// Call static method on subclass
+const dog = new Dog();
+console.log(Dog.isAnimal(dog)); // Output: true
+
+/*----
+5. Differences Between Static and Instance Methods
+->
+          Static Methods	                                    Instance Methods
+i.  Called on the class itself	                   i. Called on instances of the class
+ii. Cannot access instance properties	             ii. Can access and modify instance properties
+iii. Useful for utility or helper functions	       iii. Used to operate on the instance’s data
+
+6. Real-World Example: Static Methods in Built-in Objects
+-> JavaScript has several built-in objects that use static methods, like Math and Object.
+
+*/
+
+// Math static methods
+console.log(Math.max(10, 20)); // Output: 20
+console.log(Math.sqrt(16)); // Output: 4
+
+// Object static methods
+const obj = { a: 1, b: 2 };
+console.log(Object.keys(obj)); // Output: ['a', 'b']
+console.log(Object.values(obj)); // Output: [1, 2]
+
+/*
+# Summary
+1. Static methods are defined on the class itself and not on instances.
+2. They are called using the class name, and not through object instances.
+3. Static methods are useful for utility functions, helper methods, and factory functions.
+4. Static methods can be inherited by subclasses.
+*/
