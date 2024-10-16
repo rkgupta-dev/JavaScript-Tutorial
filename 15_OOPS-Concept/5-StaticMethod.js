@@ -26,15 +26,15 @@ class Driver {
     return `${name} drive ${model} car.`;
   }
 
-  static drive2(name, model){
-    return`${name} drive ${model} car.`  
+  static drive2(name, model) {
+    return `${name} drive ${model} car.`;
   }
 }
 
 const d1 = new Driver();
 console.log(d1.drive1("Rohit", "Tata Harrier")); // Output: Rohit drive Tata Harrier car.
 
-// if we use static method then access directly like below 
+// if we use static method then access directly like below
 console.log(Driver.drive2("Akhil", "Benz")); // Output: Akhil drive Benz car.
 
 class Calculator {
@@ -58,3 +58,34 @@ const calc = new Calculator();
 
 // Call instance method on the object
 console.log(calc.subtract(5, 3)); // Output: 2
+
+/*
+2. When to Use Static Methods
+-> Static methods are useful for operations that are related to the class but don’t need to access or modify
+   any specific instance data. */
+
+class User {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  // Static method to compare two users by age
+  static compareAge(user1, user2) {
+    return `The difference age b/w ${user1.name} & ${user2.name} = ${
+      user1.age - user2.age
+    }`;
+  }
+}
+
+const user1 = new User("Rohit", 26);
+const user2 = new User("Nikhil", 10);
+
+// Compare users by age using static method
+console.log(User.compareAge(user1, user2));
+
+/*
+3. Static Methods in Constructor Functions
+-> Static methods can also be added to constructor functions (older JavaScript syntax) by assigning them
+   directly to the constructor. */
+
