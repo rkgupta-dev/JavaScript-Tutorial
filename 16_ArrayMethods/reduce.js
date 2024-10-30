@@ -61,3 +61,23 @@ console.log(product);
 /*
 6. Grouping Items by Property in an Array of Objects
 -> Using reduce() to group an array of objects by a specific property.   */
+
+let people = [
+  { name: "Rohit", city: "Ranchi" },
+  { name: "Shilton", city: "Bengalore" },
+  { name: "Charlie", city: "New York" },
+  { name: "Dave", city: "San Francisco" },
+];
+
+let groupedByCity = people.reduce((acc, person) => {
+  acc[person.city] = acc[person.city] || [];
+  acc[person.city].push(person.name);
+  return acc;
+}, {});
+
+console.log(groupedByCity);
+
+/*
+7. Removing Duplicate Values in an Array
+-> Using reduce() to remove duplicates from an array.   */
+
