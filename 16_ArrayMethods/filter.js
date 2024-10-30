@@ -1,6 +1,5 @@
 /*
 ## filter()
-filter()
 Purpose: Creates a new array with elements that pass a certain condition.
 Use case: When you want to keep only the items that meet certain criteria.
 
