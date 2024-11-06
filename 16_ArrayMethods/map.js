@@ -94,22 +94,27 @@ console.log(squareOddNumber);
 8. Using map() to Flatten an Array of Arrays
 -> You can flatten a nested array using map() combined with flat(). */
 
-let nestedArray = [[1, 2], [3, 4], [5, 6]];
-let flattened = nestedArray.map(arr => arr).flat();
-console.log(flattened);  // Output: [1, 2, 3, 4, 5, 6]
-
+let nestedArray = [
+  [1, 2],
+  [3, 4],
+  [5, 6],
+];
+let flattened = nestedArray.map((arr) => arr).flat();
+console.log(flattened); // Output: [1, 2, 3, 4, 5, 6]
 
 /*
 9. Creating an Array of Random Numbers
 -> You can create an array of random numbers using map().  */
 
-let randomNumbers = Array.from({ length: 5 }).map(() => Math.floor(Math.random() * 100));
-console.log(randomNumbers);  // Output: Random array of 5 numbers between 0 and 99
+let randomNumbers = Array.from({ length: 5 }).map(() =>
+  Math.floor(Math.random() * 100)
+);
+console.log(randomNumbers); // Output: Random array of 5 numbers between 0 and 99
 
 /*
 10. Formatting Dates
 -> If you have an array of date strings and want to format them in a specific way, you can use map(). */
 
 let dates = ["2023-01-01", "2023-02-15", "2023-03-30"];
-let formattedDates = dates.map(date => new Date(date).toLocaleDateString());
-console.log(formattedDates);  // Output: [formatted dates based on local settings]
+let formattedDates = dates.map((date) => new Date(date).toLocaleDateString());
+console.log(formattedDates); // Output: [formatted dates based on local settings]
