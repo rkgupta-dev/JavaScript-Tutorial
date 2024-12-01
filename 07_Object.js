@@ -24,6 +24,7 @@ const person = {
   greet: function () {
     console.log(`Hello, My name is ${this.name}`);
     console.log(`Hello, I am from ${this.address}`);
+    console.log(`I am ${this.age} years old.`)
   },
 };
 
