@@ -36,6 +36,13 @@ function localVariable() {
 localVariable();
 // console.log(message); // Error: message is not defined (outside scope)
 
+function showPrice() {
+  let price = 255;
+  console.log(price);
+}
+showPrice(); // Output: 255
+// console.log(price);  // Error: price is not defined
+
 // 4. Global Variable: Declared outside of any function or block, accessible from anywhere.
 
 let globalMessage = "I am global"; // Global variable
