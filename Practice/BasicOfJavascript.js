@@ -53,6 +53,8 @@ function globalVariable() {
 globalVariable(); // Output: I am global
 console.log(globalMessage); // Output: I am global
 
+let Price = 500;
+
 // 3. Using Both Local and Global Variables: Local variables take precedence over global variables with the same name.
 
 let Name = "Global Name"; // Global variable
