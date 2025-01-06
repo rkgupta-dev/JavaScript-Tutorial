@@ -65,3 +65,14 @@ function showName() {
 }
 showName();
 console.log(Name); // Output: Global Name
+
+/*--------------Operators in Javascript------------------------------
+1. Arithmetic Operators
+Perform mathematical calculations.   */
+
+console.log(5 + 3);  // Addition: 8
+console.log(5 - 3);  // Subtraction: 2
+console.log(5 * 3);  // Multiplication: 15
+console.log(5 / 2);  // Division: 2.5
+console.log(5 % 2);  // Modulus: 1 (remainder of division)
+console.log(2 ** 3); // Exponentiation: 8 (2 raised to the power of 3)
