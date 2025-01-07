@@ -76,3 +76,48 @@ console.log(5 * 3);  // Multiplication: 15
 console.log(5 / 2);  // Division: 2.5
 console.log(5 % 2);  // Modulus: 1 (remainder of division)
 console.log(2 ** 3); // Exponentiation: 8 (2 raised to the power of 3)
+
+
+// 2. Assignment Operators:- Used to assign values to variables.    
+
+let x = 5;
+
+x += 3;  // x = x + 3
+console.log("Add and assign:", x);        // 8
+
+x *= 2;  // x = x * 2
+console.log("Multiply and assign:", x);   // 16
+
+x -= 4;  // x = x - 4
+console.log("Subtract and assign:", x);   // 12
+
+
+// 3. Comparison Operators:- Used to compare values.
+
+let num = 10;
+
+console.log("Equal to:", num == "10");    // true (type conversion)
+console.log("Strict equal to:", num === "10"); // false (no type conversion)
+console.log("Not equal to:", num != 5);   // true
+console.log("Greater than:", num > 5);    // true
+console.log("Less than:", num < 15);      // true
+console.log("Greater or equal:", num >= 10); // true
+
+// 4. Logical Operators:- Used to combine or invert boolean values.
+
+let isAdult = true, hasPermission = false;
+
+console.log("AND:", isAdult && hasPermission);  // false
+console.log("OR:", isAdult || hasPermission);   // true
+console.log("NOT:", !isAdult);                  // false
+
+// 5. Bitwise Operators:- Operate on binary numbers.
+
+let p = 5, q = 1; // Binary: 5 = 101, 1 = 001
+
+console.log("AND:", p & q);  // 1 (001)
+console.log("OR:", p | q);   // 5 (101)
+console.log("XOR:", p ^ q);  // 4 (100)
+console.log("Left shift:", p << 1); // 10 (1010)
+console.log("Right shift:", p >> 1); // 2 (10)
+
