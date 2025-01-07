@@ -121,3 +121,39 @@ console.log("XOR:", p ^ q);  // 4 (100)
 console.log("Left shift:", p << 1); // 10 (1010)
 console.log("Right shift:", p >> 1); // 2 (10)
 
+// 6. Ternary Operator:- A shorthand for if-else.
+
+let age1 = 20;
+let category = age1 >= 18 ? "Adult" : "Minor";
+console.log("Category:", category); // "Adult"
+
+
+// 7. String Operators:- Used to concatenate strings.
+
+let firstName = "Rohit", lastName = "Kumar";
+
+console.log("Full Name:", firstName + " " + lastName); // "Rohit Kumar"
+
+// 8. Type Operators:- Used to check or manipulate types.
+
+let value = "Hello";
+console.log("Type of value:", typeof value);  // "string"
+
+let obj = { name: "Alice" };
+console.log("Is instance of Object:", obj instanceof Object); // true
+
+
+// 9. Other Operators
+
+let emp = { name: "Rohit", age: 25 };
+
+// `delete` operator
+delete emp.age;
+console.log("After delete:", emp); // { name: "Rohit" }
+
+// `in` operator
+console.log("name in obj:", "name" in emp); // true
+
+// Comma operator
+let result = (1, 2, 3); // Returns the last value
+console.log("Comma operator result:", result); // 3
