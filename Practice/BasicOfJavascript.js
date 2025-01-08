@@ -3,10 +3,10 @@
 -> JavaScript is a programming language used to make web pages interactive. 
    It can be run in the browser or on the server (Node.js).
 
-## Concepts: Variables, Data Types, Operators, Basic Syntax   
+## Concepts: Variables, Operators, Data Types, Basic Syntax   
 
 ------------------------------------------------------------------------------------------------------
-Variables :-  Variables are used to store data. In JavaScript, you can declare variables using var, let, or const.
+## Variables :-  Variables are used to store data. In JavaScript, you can declare variables using var, let, or const.
 1. Declaring Variables: Use var, let, or const to declare variables.           */
 
 let name = "Ram"; // (block-scoped)
@@ -66,58 +66,59 @@ function showName() {
 showName();
 console.log(Name); // Output: Global Name
 
-/*--------------Operators in Javascript------------------------------
+/*----------------------------------------------------------------------------
+## Operators:- JavaScript operators are symbols or keywords that perform operations on operands. 
 1. Arithmetic Operators
 Perform mathematical calculations.   */
 
-console.log(5 + 3);  // Addition: 8
-console.log(5 - 3);  // Subtraction: 2
-console.log(5 * 3);  // Multiplication: 15
-console.log(5 / 2);  // Division: 2.5
-console.log(5 % 2);  // Modulus: 1 (remainder of division)
+console.log(5 + 3); // Addition: 8
+console.log(5 - 3); // Subtraction: 2
+console.log(5 * 3); // Multiplication: 15
+console.log(5 / 2); // Division: 2.5
+console.log(5 % 2); // Modulus: 1 (remainder of division)
 console.log(2 ** 3); // Exponentiation: 8 (2 raised to the power of 3)
 
-
-// 2. Assignment Operators:- Used to assign values to variables.    
+// 2. Assignment Operators:- Used to assign values to variables.
 
 let x = 5;
 
-x += 3;  // x = x + 3
-console.log("Add and assign:", x);        // 8
+x += 3; // x = x + 3
+console.log("Add and assign:", x); // 8
 
-x *= 2;  // x = x * 2
-console.log("Multiply and assign:", x);   // 16
+x *= 2; // x = x * 2
+console.log("Multiply and assign:", x); // 16
 
-x -= 4;  // x = x - 4
-console.log("Subtract and assign:", x);   // 12
-
+x -= 4; // x = x - 4
+console.log("Subtract and assign:", x); // 12
 
 // 3. Comparison Operators:- Used to compare values.
 
 let num = 10;
 
-console.log("Equal to:", num == "10");    // true (type conversion)
+console.log("Equal to:", num == "10"); // true (type conversion)
 console.log("Strict equal to:", num === "10"); // false (no type conversion)
-console.log("Not equal to:", num != 5);   // true
-console.log("Greater than:", num > 5);    // true
-console.log("Less than:", num < 15);      // true
+console.log("Not equal to:", num != 5); // true
+console.log("Greater than:", num > 5); // true
+console.log("Less than:", num < 15); // true
 console.log("Greater or equal:", num >= 10); // true
 
 // 4. Logical Operators:- Used to combine or invert boolean values.
 
-let isAdult = true, hasPermission = false;
+let isAdult = true,
+  hasPermission = false;
 
-console.log("AND:", isAdult && hasPermission);  // false
-console.log("OR:", isAdult || hasPermission);   // true
-console.log("NOT:", !isAdult);                  // false
+console.log("AND:", isAdult && hasPermission); // false
+console.log("OR:", isAdult || hasPermission); // true
+console.log("NOT:", !isAdult); // false
 
 // 5. Bitwise Operators:- Operate on binary numbers.
 
-let p = 5, q = 1; // Binary: 5 = 101, 1 = 001
+let p = 5,
+  q = 1; // Binary: 5 = 101, 1 = 001
 
-console.log("AND:", p & q);  // 1 (001)
-console.log("OR:", p | q);   // 5 (101)
-console.log("XOR:", p ^ q);  // 4 (100)
+console.log("AND:", p & q); // 1 (001)
+console.log("OR:", p | q); // 5 (101)
+console.log("XOR:", p ^ q); // 4 (100)
 console.log("Left shift:", p << 1); // 10 (1010)
 console.log("Right shift:", p >> 1); // 2 (10)
 
@@ -127,21 +128,20 @@ let age1 = 20;
 let category = age1 >= 18 ? "Adult" : "Minor";
 console.log("Category:", category); // "Adult"
 
-
 // 7. String Operators:- Used to concatenate strings.
 
-let firstName = "Rohit", lastName = "Kumar";
+let firstName = "Rohit",
+  lastName = "Kumar";
 
 console.log("Full Name:", firstName + " " + lastName); // "Rohit Kumar"
 
 // 8. Type Operators:- Used to check or manipulate types.
 
 let value = "Hello";
-console.log("Type of value:", typeof value);  // "string"
+console.log("Type of value:", typeof value); // "string"
 
 let obj = { name: "Alice" };
 console.log("Is instance of Object:", obj instanceof Object); // true
-
 
 // 9. Other Operators
 
@@ -157,3 +157,14 @@ console.log("name in obj:", "name" in emp); // true
 // Comma operator
 let result = (1, 2, 3); // Returns the last value
 console.log("Comma operator result:", result); // 3
+
+/*-----------------------------------------------------------------------------------------
+## Data Type:- In JavaScript, there are 7 primitive data types and 1 non-primitive data type. 
+
+# Primitive Data Types
+1. String:- Represents textual data.
+*/
+
+let string = "Rohitawaaaaaa";
+
+console.log("String=", string);
