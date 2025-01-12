@@ -189,3 +189,15 @@ let isLoggedOut = false;
 
 console.log(`Boolean:- ${isLoggedIn}`);
 console.log(`Boolean:- ${isLoggedOut}`);
+
+// 5. Undefined:- Represents a variable that has been declared but not assigned a value.
+
+let sum;
+
+console.log("undefined=", sum); // undefined
+
+// 6. Null:- Represents an intentional absence of value (empty or unknown value).
+
+let data = null;
+
+console.log("Null = ", data);
