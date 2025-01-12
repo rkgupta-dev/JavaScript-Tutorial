@@ -181,3 +181,11 @@ console.log("Number:- ", age2, price);
 let bigNumber = 123456789012345678901234567890n;
 
 console.log("BigInt Number:-", bigNumber);
+
+// 4. Boolean:- Represents a logical value: true or false.
+
+let isLoggedIn = true;
+let isLoggedOut = false;
+
+console.log(`Boolean:- ${isLoggedIn}`);
+console.log(`Boolean:- ${isLoggedOut}`);
