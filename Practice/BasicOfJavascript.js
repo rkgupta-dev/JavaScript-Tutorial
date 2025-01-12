@@ -201,3 +201,35 @@ console.log("undefined=", sum); // undefined
 let data = null;
 
 console.log("Null = ", data);
+
+// 7. Symbol:- Represents a unique and immutable value, often used as object property keys.
+
+let id = Symbol("id");
+
+console.log(id); //Symbol(id)
+
+/*
+# Non-Primitive Data Type
+1. Object
+-> Represents collections of key-value pairs or more complex entities.
+-> Includes arrays, functions, dates, etc.                                  */
+
+let person = { name: "Rohit Kr. Gupta", age: 30 };
+let arr = [1, 2, 3];
+let func = function () {
+  return "Hello";
+};
+
+console.log("Object = ", person);
+console.log("Array Object = ", arr);
+console.log("Function = ", func());
+
+/*
+# Special Notes
+-> JavaScript is dynamically typed, meaning you don't need to specify the data type explicitly.
+-> You can check the type of a value using the typeof operator:                                */
+
+console.log(typeof "Hello"); // "string"
+console.log(typeof 42); // "number"
+console.log(typeof null); // "object" (this is a historical quirk in JavaScript)
+console.log(typeof undefined); // "undefined"
