@@ -168,3 +168,16 @@ console.log("Comma operator result:", result); // 3
 let string = "Rohitawaaaaaa";
 
 console.log("String=", string);
+
+// 2. Number:- Represents numeric values (both integers and floating-point numbers).
+
+let age2 = 25;
+let price = 99.99;
+
+console.log("Number:- ", age2, price);
+
+// 3. BigInt:- Represents integers with arbitrary precision.
+
+let bigNumber = 123456789012345678901234567890n;
+
+console.log("BigInt Number:-", bigNumber);
